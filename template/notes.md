@@ -1,0 +1,7 @@
+# Notes
+
+## Ideas
+-
+
+## Bin
+-
