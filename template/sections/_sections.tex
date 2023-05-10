@@ -1,0 +1,52 @@
+% Titles.
+\title{The Longer Version of the Desired Paper Title}
+\shorttitle{The Short Title}
+
+% Authors and affiliations.
+\authorsnames[1, 2, 1]{Author One, Author Two, Author Three}
+\authorsaffiliations{Tilburg University, Utrecht University\\
+    \notice{\commitInfo}
+}
+
+% Left header name.
+\leftheader{Author et al.}
+
+% Abstract.
+\abstract{\input{sections/abstract}}
+
+% Keywords.
+\keywords{keyword one, keyword two, keyword three}
+
+% Note.
+\authornote{\addORCIDlink{Author One}{0000-0002-6460-0107}, \addORCIDlink{Author
+    Two}{0000-0002-6460-0107}, \addORCIDlink{Author Three}{0000-0002-6460-0107}.
+
+    Correspondence concerning this article should be addressed to Author One,
+    Department of Methodology and Statistics, Tilburg University, PO Box 90153
+    5000 LE, Tilburg. E-mail:
+    \href{mailto:contact@mihaiconstantin.com}{contact@mihaiconstantin.com}.}
+
+% Main content.
+\begin{document}
+
+% Title page.
+\maketitle
+
+% Footnotes.
+\input{sections/_footnotes}
+
+% Paper outline for the writing process.
+\input{sections/_outline}
+
+% Sections.
+\input{sections/introduction}
+\input{sections/section-one}
+% ...
+
+% References.
+\printbibliography
+
+% Appendix.
+\appendix
+
+\end{document}

@@ -1,0 +1,117 @@
+{
+    "settings": {
+        "editor.rulers": [
+            { "column":  80, "color": "#64646449" },
+        ],
+        "editor.lineHeight": 33,
+        "workbench.colorTheme": "Default Dark+",
+        "cSpell.checkLimit": 1000,
+        "rewrap.autoWrap.enabled": false,
+        "latex-workshop.latex.autoBuild.run": "never",
+        "latex-workshop.latex.autoBuild.interval": 1000,
+        "latex-workshop.latex.outDir": "%WORKSPACE_FOLDER%/build",
+        "latex-workshop.view.pdf.viewer": "tab",
+        "latex-workshop.view.pdf.tab.editorGroup": "current",
+        // "latex-workshop.view.pdf.scrollMode": 1,
+        // "latex-workshop.view.pdf.invert": 0.875,
+        // "latex-workshop.view.pdf.invertMode.grayscale": 0.3,
+        // "latex-workshop.view.pdf.invertMode.brightness": 2,
+        // "latex-workshop.view.pdf.invertMode.sepia": 1,
+        "latex-workshop.hover.preview.scale": 1.5,
+        "latex-workshop.synctex.afterBuild.enabled": true,
+        "latex-workshop.bibtex-format.tab": "4 spaces",
+        "latex-workshop.latex.tools": [
+            {
+                "name": "latexmk",
+                "command": "latexmk",
+                "args": [
+                    "-synctex=1",
+                    "-interaction=nonstopmode",
+                    "-file-line-error",
+                    "-pdf",
+                    "-shell-escape",
+                    "-outdir=%OUTDIR%",
+                    "%DOCFILE%"
+                ],
+                "env": {}
+            },
+            {
+                "name": "lualatexmk",
+                "command": "latexmk",
+                "args": [
+                    "-synctex=1",
+                    "-interaction=nonstopmode",
+                    "-file-line-error",
+                    "-lualatex",
+                    "-outdir=%OUTDIR%",
+                    "%DOC%"
+                ],
+                "env": {}
+            },
+            {
+                "name": "latexmk_rconly",
+                "command": "latexmk",
+                "args": [
+                    "%DOC%"
+                ],
+                "env": {}
+            },
+            {
+                "name": "pdflatex",
+                "command": "pdflatex",
+                "args": [
+                    "-synctex=1",
+                    "-interaction=nonstopmode",
+                    "-file-line-error",
+                    "%DOC%"
+                ],
+                "env": {}
+            },
+            {
+                "name": "bibtex",
+                "command": "bibtex",
+                "args": [
+                    "%DOCFILE%"
+                ],
+                "env": {}
+            },
+            {
+                "name": "rnw2tex",
+                "command": "Rscript",
+                "args": [
+                    "-e",
+                    "knitr::opts_knit$set(concordance = TRUE); knitr::knit('%DOCFILE_EXT%')"
+                ],
+                "env": {}
+            },
+            {
+                "name": "jnw2tex",
+                "command": "julia",
+                "args": [
+                    "-e",
+                    "using Weave; weave(\"%DOC_EXT%\", doctype=\"tex\")"
+                ],
+                "env": {}
+            },
+            {
+                "name": "jnw2texmintex",
+                "command": "julia",
+                "args": [
+                    "-e",
+                    "using Weave; weave(\"%DOC_EXT%\", doctype=\"texminted\")"
+                ],
+                "env": {}
+            },
+            {
+                "name": "tectonic",
+                "command": "tectonic",
+                "args": [
+                    "--synctex",
+                    "--keep-logs",
+                    "%DOC%.tex"
+                ],
+                "env": {}
+            }
+        ],
+    }
+}

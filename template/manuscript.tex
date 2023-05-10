@@ -1,0 +1,137 @@
+\documentclass[man, a4paper, 10pt, donotrepeattitle]{apa7}
+\usepackage[american]{babel}
+\usepackage[style = apa, backend = biber]{biblatex}
+\usepackage[american=nohyphenation]{hyphsubst}
+\usepackage{amsmath}
+\usepackage{sepfootnotes}
+\usepackage{amssymb}
+\usepackage{listings}
+\usepackage{rotating}
+\usepackage{mdframed}
+\usepackage[outputdir=build]{minted}
+\usepackage{csquotes}
+\usepackage{hyperref}
+\usepackage{soul}
+\usepackage{datetime}
+\usepackage{enumitem}
+\usepackage{pifont}
+\usepackage{gitinfo2}
+\usepackage{environ}
+\usepackage{lipsum}
+
+
+% #region Custom commands or renewals.
+
+% Development notice.
+\newcommand{\notice}[1]{
+    \parbox{0.8\linewidth}{\darkred\centering\small\vspace*{50px}#1}
+}
+
+% Add command to print latest commit hash and date.
+\newcommand{\commitInfo}{\textbf{Version}\\{\footnotesize commit \code{\gitAbbrevHash} on \gitAuthorDate}}
+
+% Conditional independence.
+\newcommand{\ci}{\mathrel{\text{\scalebox{1.07}{$\perp\mkern-10mu\perp$}}}}
+
+% Matrix and vectors command.
+\newcommand{\mat}[1]{\bm{#1}}
+\renewcommand{\vec}[1]{\bm{#1}}
+
+% Command for inline code.
+\newcommand{\code}[1]{\textbf{\texttt{#1}}}
+
+% Command for citation placeholder.
+\renewcommand{\cite}{\textcolor{lightgray}{\textit{cite}}}
+
+% Command for a todo item.
+\newcommand{\todo}[1]{{\darkred \textit{#1}}}
+
+% Command for true models.
+\newcommand{\m}[1]{$P_{#1}$}
+\newcommand{\mv}[2]{$P^{(#2)}_{#1}$}
+
+% Command for referencing paragraphs.
+\newcommand{\pr}[2][]{\textcolor{gray}{$(\bm{P_{#2}^{#1}})$}}
+
+% Define color commands.
+\newcommand{\darkred}{\color[HTML]{990000}}
+\newcommand{\darkgreen}{\color[HTML]{008000}}
+\newcommand{\darkorange}{\color[HTML]{b35900}}
+\newcommand{\darkyellow}{\color[HTML]{cca300}}
+\newcommand{\fadegray}{\color[HTML]{6e7577}}
+
+% Command for outline symbols.
+\newcommand{\done}{{\darkgreen\ding{52}}}
+\newcommand{\drop}{{\darkred\ding{56}}}
+\newcommand{\look}{{\darkorange\ding{42}}}
+\newcommand{\idea}{{\darkyellow\ding{162}}}
+\newcommand{\head}{{\ding{229}}}
+
+% Decrease font size for bibliography items.
+\renewcommand*{\bibfont}{\normalfont\small}
+
+% #endregion
+
+
+% #region Package configuration.
+
+% Library settings.
+\DeclareLanguageMapping{american}{american-apa}
+
+% Load the library.
+\addbibresource{library.bib}
+
+% Minted settings.
+\setminted{fontsize=\small, baselinestretch=1.5}
+
+% Define date and time format.
+\shortdate
+\settimeformat{hhmmsstime}
+
+% Link colors.
+\hypersetup{
+    colorlinks,
+    linkcolor={red!50!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}
+
+% Set the depth of 'enumitem' nested lists.
+\setlistdepth{9}
+
+% List configuration for outline items that indicate paragraphs to be written.
+\newlist{paragraphs}{itemize}{9}
+\setlist[paragraphs]{label=$\square$}
+
+% List configuration for outline items that represent paragraph notes.
+\newlist{notelist}{itemize}{9}
+\setlist[notelist]{
+    label=,
+    itemsep=0pt,
+    parsep=0pt,
+    before=\footnotesize \fadegray
+}
+
+% Define boolean for outline notes visibility.
+\newbool{shownotes}
+
+% Set default outline notes to be displayed.
+\booltrue{shownotes}
+
+% Disable outline notes.
+% \boolfalse{shownotes}
+
+% Define conditional environment for outline notes.
+\NewEnviron{notes}{
+    \ifbool{shownotes}{
+        \begin{notelist}
+            \BODY
+        \end{notelist}
+    }{}
+}
+
+% #endregion
+
+
+% Include the document structure.
+\input{sections/_sections}

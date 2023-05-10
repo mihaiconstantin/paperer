@@ -1,0 +1,64 @@
+% Decrease font size.
+\small
+
+% Section title.
+\section{Outline}
+
+% Legend.
+\subsection{Symbol Legend}
+
+% Symbol meaning.
+\begin{paragraphs}
+    \item Not started or in rough form (i.e., to write).
+    \item[\done] Ready for review or in final form.
+    \item[\drop] Will not be written or to be dropped.
+    \item[\look] Needs attention or input (i.e., something is not clear).
+    \item[\head] Grouping heading (e.g., section, subsection etc.).
+\end{paragraphs}
+
+% Structure.
+\subsection{Paper Structure}
+
+% Outline items.
+\begin{paragraphs}
+    % Introduction section.
+    \item[\head] \textbf{Introduction}
+    \begin{paragraphs}
+        \item[\done] \pr{1} the topic sentence for paragraph one
+        \item[\done] \pr{2} the topic sentence for paragraph two
+    \end{paragraphs}
+
+    % Background section.
+    \item[\head] \textbf{Background}
+    \begin{paragraphs}
+        \item[\look] \pr{3} the topic sentence for paragraph three
+
+        % Subsection one.
+        \item[\head] \textbf{Subsection One}
+        \begin{paragraphs}
+            \item[\done] \pr{4} the topic sentence for paragraph four
+            \item \pr{5} the topic sentence for paragraph five
+            \begin{notes}
+                \item Some notes about what should be included in this
+                    paragraph. Their visibility can be toggled via the
+                    \code{shownotes} boolean as \code{boolfalse\{shownotes\}}.
+                    \lipsum[7][1-5]
+            \end{notes}
+        \end{paragraphs}
+
+        % Subsection two.
+        \item[\head] \textbf{Subsection Two}
+        \begin{paragraphs}
+            \item[\done] \pr{6} the topic sentence for paragraph six
+        \end{paragraphs}
+    \end{paragraphs}
+
+    % Another section.
+    \item[\head] \textbf{\dots}
+    \begin{paragraphs}
+        \item ...
+    \end{paragraphs}
+\end{paragraphs}
+
+% Reset font size.
+\normalsize
