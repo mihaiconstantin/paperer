@@ -1,8 +1,10 @@
 # Ignore `build` contents.
 /build/**/*
+!/build/.gitkeep
 
 # Ignore `archive` contents.
 /archive/**/*
+!/archive/.gitkeep
 
 # Miscellaneous.
 .DS_Store

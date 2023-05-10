@@ -1,7 +1,3 @@
-# Files to keep in the template.
-!/build/.gitkeep
-!/archive/.gitkeep
-
 # Temporary files.
 **/tmp*
 
