@@ -11,16 +11,16 @@
 </h1>
 
 <!-- badges: start -->
-<div align="center">
+<p align="center">
     <a href="https://www.repostatus.org/#active"><img src="https://www.repostatus.org/badges/latest/active.svg" alt="Repository status"/></a>
     <a href="https://github.com/mihaiconstantin/paperer/releases"><img src="https://img.shields.io/github/v/release/mihaiconstantin/paperer?display_name=tag&sort=semver" alt="GitHub version"/></a>
     <a href="https://github.com/mihaiconstantin/paperer/issues"><img src="https://img.shields.io/github/issues/mihaiconstantin/paperer" alt="GitHub issues"></a>
-</div>
+</p>
 <!-- badges: end -->
 
 `paperer` is a lightweight executable to quickly scaffold a *mostly* `APA` style
-manuscript in `LaTeX`. *The idea is to install it once and run it anytime you
-want to start writing a new manuscript.* `paperer` will provide simpler project
+manuscript in `LaTeX`. The idea is to install it once and run it anytime you
+want to start writing a new manuscript. `paperer` will provide simpler project
 structure and set of files, just enough to quickly get you started writing.
 Currently, `paperer` is build only for `macOS` and other `Unix`-based operating
 systems. Support for `Windows` may be added based on user demand.
