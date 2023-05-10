@@ -1,3 +1,12 @@
-.DS_Store
+# Files to keep in the template.
+!/build/.gitkeep
+!/archive/.gitkeep
+
+# Temporary files.
 **/tmp*
+
+# Miscellaneous.
+.DS_Store
+
+# Editor files.
 .vscode
