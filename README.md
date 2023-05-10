@@ -84,7 +84,7 @@ The help message will look like this:
 Usage: paperer [option]
 
 Options:
-   -d, --directory=DIR    The directory DIR where to scaffold the paper
+   -d, --directory=DIR    The directory DIR where to prepare the paper
    --update               Update 'paperer' from GitHub
    --uninstall            Uninstall 'paperer'
    --help                 Display this help message
@@ -94,14 +94,14 @@ Description:
    - Mihai Constantin (mihai@mihaiconstantin.com)
 ```
 
-Then, to scaffold a new paper, simply run:
+Then, to prepare a new paper, simply run:
 
 ```bash
 paperer --directory=/path/to/manuscript
 ```
 
-This option will create a new directory at `/path/to/manuscript` and scaffold the
-`LaTeX` files inside it. The directory will have the following structure:
+This option will create a new directory at `/path/to/manuscript` and scaffold
+the `LaTeX` files inside it. The directory will have the following structure:
 
 ```txt
 manuscript
