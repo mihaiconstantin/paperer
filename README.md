@@ -22,16 +22,16 @@
 Starting a new manuscript can be a tedious process, and often requires copying
 files from previous projects, or searching for templates online. `paperer` aims
 to simplify this process by providing a simple executable that can be used to
-scaffold a new manuscript in `LaTeX` based on a template. A template is simply a
-collection of files that make up a manuscript. Currently, `paperer` provides an
-*mainly* `APA` template, but more templates are welcomed as contributions (i.e.,
-see the [Contributing](#contributing) section). Alternatively, you can use your
-own templates by specifying the source directory where to look for the template
-files (i.e., see the [Usage](#usage) section). In a nutshell, the idea behind
-`paperer` is to install it once and run it anytime you want to start writing a
-new manuscript.
+scaffold a new version-controlled manuscript in `LaTeX` based on a given
+template. A template is simply a collection of files that make up a manuscript.
+Currently, `paperer` provides a *mainly* `APA` template, but more templates are
+welcomed as contributions (i.e., see the [Contributing](#contributing) section).
+Alternatively, you can use your own templates by specifying the source directory
+where to look for the template files (i.e., see the [Usage](#usage) section). In
+a nutshell, the idea behind `paperer` is to install it once and run it anytime
+you want to start writing a new manuscript.
 
-`paperer` is build only for `macOS` and other `Unix`-based operating systems.
+`paperer` is build for `macOS` and other `Unix`-based operating systems.
 However, support for `Windows` may be added based on user demand.
 
 ## Installation
