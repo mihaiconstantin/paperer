@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# User feedback.
+echo "\nPreparing the installation..."
+
 # Define the install directory.
 INSTALL_DIR=/usr/local
 
@@ -10,7 +13,7 @@ BIN_DIR=/usr/local/bin
 echo "Cloning the 'mihaiconstantin/paperer' repository..."
 
 # Close the repository at the install location.
-git clone --depth 1 https://github.com/mihaiconstantin/paperer.git $INSTALL_DIR &> /dev/null
+git clone --depth 1 https://github.com/mihaiconstantin/paperer.git $INSTALL_DIR/paperer &> /dev/null
 
 # User feedback.
 echo "Installing 'paperer'..."
