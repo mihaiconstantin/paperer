@@ -18,12 +18,21 @@
 </p>
 <!-- badges: end -->
 
-`paperer` is a lightweight executable to quickly scaffold a *mostly* `APA` style
-manuscript in `LaTeX`. The idea is to install it once and run it anytime you
-want to start writing a new manuscript. `paperer` will provide simpler project
-structure and set of files, just enough to quickly get you started writing.
-Currently, `paperer` is build only for `macOS` and other `Unix`-based operating
-systems. Support for `Windows` may be added based on user demand.
+`paperer` is a lightweight executable to quickly scaffold `LaTeX` projects.
+Starting a new manuscript can be a tedious process, and often requires copying
+files from previous projects, or searching for templates online. `paperer` aims
+to simplify this process by providing a simple executable that can be used to
+scaffold a new manuscript in `LaTeX` based on a template. A template is simply a
+collection of files that make up a manuscript. Currently, `paperer` provides an
+*mainly* `APA` template, but more templates are welcomed as contributions (i.e.,
+see the [Contributing](#contributing) section). Alternatively, you can use your
+own templates by specifying the source directory where to look for the template
+files (i.e., see the [Usage](#usage) section). In a nutshell, the idea behind
+`paperer` is to install it once and run it anytime you want to start writing a
+new manuscript.
+
+`paperer` is build only for `macOS` and other `Unix`-based operating systems.
+However, support for `Windows` may be added based on user demand.
 
 ## Installation
 
@@ -78,30 +87,37 @@ You can start by print the help message using the `--help` or `-h` options:
 paperer --help
 ```
 
-The help message will look like this:
+The help message will look as follows:
 
 ```txt
 Usage: paperer [option]
 
 Options:
-   -d, --directory=DIR    The directory DIR where to prepare the paper
-   --update               Update 'paperer' from GitHub
-   --uninstall            Uninstall 'paperer'
-   --help                 Display this help message
+   -d, --directory=DIR    The directory DIR where to prepare the paper without the trailing slash.
+   -t, --template=TPL     The template TPL to use for scaffolding. The default is 'apa'.
+                          Currently included templates with 'paperer' are: 'apa'.
+                          However, custom templates can be used by specifying the source folder.
+   -s, --source=DIR       Source directory where to look for the template TPL for scaffolding.
+                          The default is the 'templates' folder of the 'paperer' installation.
+                          This option is useful if you want to use your own templates.
+   --update               Update 'paperer' from GitHub.
+   --uninstall            Uninstall 'paperer'.
+   --help                 Display this help message.
 
 Description:
    - Repository: https://github.com/mihaiconstantin/paperer
    - Mihai Constantin (mihai@mihaiconstantin.com)
 ```
 
-Then, to prepare a new paper, simply run:
+Then, to prepare a new manuscript at path `/path/to/manuscript`, simply run:
 
 ```bash
 paperer --directory=/path/to/manuscript
 ```
 
 This option will create a new directory at `/path/to/manuscript` and scaffold
-the `LaTeX` files inside it. The directory will have the following structure:
+the `LaTeX` files associated with the default `apa` template. The scaffolding
+process for the `apa` template will result in the following structure:
 
 ```txt
 manuscript
@@ -121,7 +137,9 @@ manuscript
     └── section-one.tex
 ```
 
-Check out the `sample/` directory for a `.pdf` [sample document]().
+Check out the document [`apa-sample.pdf`](./samples/apa-sample.pdf) in
+`samples/` directory for an example of the resulting manuscript. Also, check out
+the `--template` and `--source` flags to specify your own local templates.
 
 ## Release Notes
 
@@ -130,7 +148,22 @@ See the [CHANGELOG](CHANGELOG.md) file.
 ## Contributing
 
 Any contributions, suggestions, or bug reports are welcome and greatly
-appreciated.
+appreciated. Please open an
+[issue](https://github.com/mihaiconstantin/paperer/issues) or submit a [pull
+request](https://github.com/mihaiconstantin/paperer/pulls).
+
+One way to contribute is to provide a new template for a different style of
+manuscript. To do so, please open a [pull request]() as follows:
+
+1. Create a new directory in the `templates/`.
+2. Add a sample of the resulting document in the `samples/` directory, following
+   the naming convention `<template-name>-sample.pdf`.
+3. Adjust the the function `display_help` in `paperer.sh` to include the new
+   template in the help message.
+
+Another way to contribute is by helping with translating the `bash` scripts
+`install.sh` and `paperer.sh` to other `PowerShell` or `Batch` scripts for
+`Windows`.
 
 ## License
 
