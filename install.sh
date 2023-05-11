@@ -39,5 +39,8 @@ chmod +x $INSTALL_DIR/paperer
 # Create a symbolic link to the executable.
 ln -sf $INSTALL_DIR/paperer $BIN_DIR/paperer
 
+# Change ownership.
+chown -R $SUDO_USER $INSTALL_DIR
+
 # User feedback.
 echo " + Installed 'paperer' successfully! Type 'paperer --help' to get started."
