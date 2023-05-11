@@ -9,6 +9,18 @@ BIN_DIR=/usr/local/bin
 # Create the full path for the `paperer` installation.
 INSTALL_DIR=$INSTALL_DIR/paperer
 
+# If `paperer` is already installed.
+if [ -d "$INSTALL_DIR" ]; then
+    # Ask the users to uninstall or update it instead.
+    echo " (!) Error: 'paperer' is already installed. Please first uninstall or update using 'paperer --update'." >&2
+
+    # Exit with error code.
+    exit 1
+else
+    # Indicate that no prior installation was found.
+    echo " + No prior installation of 'paperer' detected."
+fi
+
 # User feedback.
 echo " + Cloning the 'paperer' repository..."
 
