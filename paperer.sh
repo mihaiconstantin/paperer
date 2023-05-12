@@ -132,15 +132,6 @@ prepare() {
         return 1
     fi
 
-    # If changing ownership failed.
-    if [ $? -ne 0 ]; then
-        # User feedback.
-        echo " (!) Error: failed to change ownership." >&2
-
-        # Return with error code.
-        return 1
-    fi
-
     # Change back the directory.
     cd "$CURRENT_DIR"
 
