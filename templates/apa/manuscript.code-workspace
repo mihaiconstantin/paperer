@@ -1,4 +1,9 @@
 {
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
     "settings": {
         "editor.rulers": [
             { "column":  80, "color": "#64646449" },
