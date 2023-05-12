@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1] - 2023-05-12
+
+### Fixed
+- Add missing `folders` array to `manuscript.code-workspace` file for the `apa`
+  template.
+- Remove redundant check for ownership change in `paperer.sh` script.
+
 ## [1.0.0] - 2023-05-12
 
 ### Added
