@@ -28,8 +28,9 @@ Currently, `paperer` provides a *mainly* `APA` template, but more templates are
 welcomed as contributions (i.e., see the [Contributing](#contributing) section).
 Alternatively, you can use your own templates by specifying the source directory
 where to look for the template files (i.e., see the [Usage](#usage) section). In
-a nutshell, the idea behind `paperer` is to install it once and run it anytime
-you want to start writing a new manuscript.
+a nutshell, the idea behind `paperer` is that any bit of friction is too much
+friction&mdash;therefore, just install it once and run it anytime you want to
+start writing a new manuscript.
 
 `paperer` is build for `macOS` and other `Unix`-based operating systems.
 However, support for `Windows` may be added based on user demand.
