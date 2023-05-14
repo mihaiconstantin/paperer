@@ -9,7 +9,7 @@ INSTALL_DIR="/usr/local/paperer"
 # Define the executable directory.
 BIN_DIR=/usr/local/bin
 
-# Repository URL fo `paperer`.
+# Repository URL for `paperer`.
 REPO_URL="https://github.com/mihaiconstantin/paperer.git"
 
 # Directory where to prepare a new manuscript.
@@ -184,7 +184,7 @@ uninstall() {
 }
 
 
-# Parse command line arguments
+# Parse command line arguments.
 for i in "$@"
 do
 case $i in
@@ -258,7 +258,6 @@ case $i in
 esac
 done
 
-# REMOVE THIS COMMENT.
 
 # If no flags have been provided.
 if [ $FLAGS -eq 0 ]
